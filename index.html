@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no" />
+    <meta name="theme-color" content="#1a1220" />
+    <title>Mycelium (prototype)</title>
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="icon" type="image/png" href="./icons/icon-192.png" />
+    <link rel="apple-touch-icon" href="./icons/icon-192.png" />
+    <script type="module" crossorigin src="./assets/index-BuMACUrd.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-DXnJSJoT.css">
+  </head>
+  <body>
+    <div class="app">
+      <header class="hud" id="hud"></header>
+      <main class="play">
+        <section class="world">
+          <div class="layer-nav">
+            <button class="nav-btn" id="totop" aria-label="Up to the surface" title="Up to the surface">▲▲</button>
+            <button class="nav-btn" id="prev" aria-label="Layer above">▲</button>
+            <button class="layer-title" id="layer-title" aria-label="All layers"><div id="layer-name"></div><div id="layer-sub"></div></button>
+            <button class="nav-btn" id="next" aria-label="Layer below">▼</button>
+            <button class="nav-btn" id="tofront" aria-label="Down to the frontier" title="Down to the frontier">▼▼</button>
+            <button class="nav-btn" id="tocircle" aria-label="To the Rune Circle" title="To the Rune Circle" hidden><img src="./assets/icon_rune.png" alt=""></button>
+          </div>
+          <div class="target" id="target" hidden></div>
+          <div class="mix-badge" id="mix" aria-label="What this layer gives"></div>
+          <button class="zoom-btn" id="zoom" hidden></button>
+          <button class="zoom-btn hoard-chip" id="hoardchip" hidden></button>
+          <button class="zoom-btn hoard-chip bounty-chip" id="bountychip" hidden></button>
+          <button class="nav-btn page-btn" id="pagebtn" hidden></button>
+          <button class="nav-btn page-btn" id="pagebtnL" hidden></button>
+          <button class="zoom-btn hoard-chip" id="gardenchip" hidden><img src="./assets/icon_garden.png" alt="">Upgrades</button>
+          <div class="zoom-btn hoard-chip nectar-chip" id="nectarchip" title="Nectar: sell crops at the cart for it, spend it on seeds and Garden upgrades" hidden><img src="./assets/res_nectar.png" alt=""><span></span></div>
+          <div class="zoom-btn hoard-chip nectar-chip rain-chip" id="rainchip" title="Downpour: crops grow ×2 until it ends (use another Rain Cloud to add time)" hidden><img src="./assets/find_raincloud.png" alt=""><span></span></div>
+          <div class="buff-col" id="buffcol" hidden></div>
+          <div class="f2-scene" id="f2scene" hidden></div>
+          <div class="view" id="view"><canvas id="dig"></canvas><div id="fx"><div class="aim" id="aim" hidden></div></div></div>
+        </section>
+        <aside class="side">
+          <div class="actions" id="actions"></div>
+          <div class="menu frame" id="menu"></div>
+        </aside>
+      </main>
+      <nav class="tabs" id="tabs"></nav>
+    </div>
+    <div class="modal" id="modal" hidden></div>
+  </body>
+</html>
